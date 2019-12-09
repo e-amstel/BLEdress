@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<!--
+This is an app that demonstrates how to control an Arduio board
+using BLE (Bluetooth Low Energy).
+Please note that you must use a HM-10 compatible module for this example to work.
+
+Plugins:
+- npm i fast-average-color
+- cordova plugin add cordova-plugin-camera
+- cordova plugin add cordova-plugin-ble
+
+-->
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no,
+		shrink-to-fit=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+	<title>HM-10 and Arduino BLE</title>
+
+	<style>
+		@import 'ui/css/evothings-app.css';
+	</style>
+
+	<script src="cordova.js"></script>
+	<script src="libs/jquery/jquery.js"></script>
+	<script src="libs/evothings/evothings.js"></script>
+	<script src="libs/evothings/ui/ui.js"></script>
+	<script src="libs/evothings/arduinoble/arduinoble.js"></script>
+	<script src="https://unpkg.com/fast-average-color/dist/index.min.js"></script> 
+	<script type="text/javascript" src="js/index.js"></script>
+	
+	
+
+</head>
+
+<body ontouchstart="" class="app-body"><!-- ontouchstart="" enables low-delay CSS transitions. -->
+
+	<p id="info">Initializing...</p>
+	<button class="yellow wide" onclick="app.connect()">CONNECT</button>
+	<br />
+	<button class="red wide" onclick="app.colorReset()">RESET COLOR</button>
+	<button class="red wide" onclick="app.colorOff()">LIGHTS OFF</button>
+	
+	<br />
+	<button class="green wide" onclick="app.takePhoto()">TAKE PHOTO</button>
+	<div class="image-container">		
+		<canvas id="canvas" class="canvas" width="200" height="300"></canvas>
+		<p id="canvastext">Color</p>
+	</div>
+	
+
+</body>
+
+</html>

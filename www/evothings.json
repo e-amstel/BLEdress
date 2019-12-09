@@ -1,0 +1,14 @@
+{
+  "uuid": "23387664-eeaa-4705-9c20-c79ae83304e5",
+  "plugins": [],
+  "libraries": [],
+  "name": "abcc",
+  "title": "ArduinoBLECameraColor",
+  "description": "App oneline description.",
+  "long-description": "App long description.",
+  "version": "",
+  "author-name": "Evothings",
+  "author-email": "build@evothings.com",
+  "author-url": "https://evothings.com",
+  "cordova-id": "com.evothings.samples.www"
+}
